@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.suggest.enabled": true,
+    "python.analysis.supportAllPythonDocuments": true
+}
