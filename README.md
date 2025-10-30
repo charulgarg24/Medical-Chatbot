@@ -1,5 +1,5 @@
 ### Build-a-Complete-Medical-Chatbot-with-LLMs-LangChain-Pinecone-Flask-AWS
-## How to run?
+# How to run?
 # STEPS:
 Clone the repository
 
@@ -9,7 +9,7 @@ conda create -n medibot python=3.10 -y
 conda activate medibot
 STEP 02- install the requirements
 pip install -r requirements.txt
-Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
+### Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 # run the following command to store embeddings to pinecone
@@ -19,15 +19,19 @@ python app.py
 Now,
 
 open up localhost:
-Techstack Used:
+### Techstack Used:
+
 Python
 LangChain
 Flask
 GPT
 Pinecone
-AWS-CICD-Deployment-with-Github-Actions
-1. Login to AWS console.
-2. Create IAM user for deployment
+# AWS-CICD-Deployment-with-Github-Actions
+
+## 1. Login to AWS console.
+
+## 2. Create IAM user for deployment
+
 #with specific access
 
 1. EC2 access : It is virtual machine
@@ -52,10 +56,13 @@ AWS-CICD-Deployment-with-Github-Actions
 1. AmazonEC2ContainerRegistryFullAccess
 
 2. AmazonEC2FullAccess
-3. Create ECR repo to store/save docker image
-- Save the URI: 315865595366.dkr.ecr.us-east-1.amazonaws.com/medicalbot
-4. Create EC2 machine (Ubuntu)
-5. Open EC2 and Install docker in EC2 Machine:
+
+## 3. Create ECR repo to store/save docker image
+- Save the URI: 534784001806.dkr.ecr.us-east-1.amazonaws.com/medical-bot
+
+## 4. Create EC2 machine (Ubuntu)
+
+## 5. Open EC2 and Install docker in EC2 Machine:
 #optinal
 
 sudo apt-get update -y
@@ -71,9 +78,13 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
-6. Configure EC2 as self-hosted runner:
+
+## 6. Configure EC2 as self-hosted runner:
+
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
-7. Setup github secrets:
+
+## 7. Setup github secrets:
+
 AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 AWS_DEFAULT_REGION
